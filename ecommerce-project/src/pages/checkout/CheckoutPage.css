@@ -110,7 +110,6 @@
 }
 
 .checkout-page .product-price {
-
   font-weight: 700;
   margin-bottom: 5px;
 }
@@ -122,14 +121,14 @@
 @media (max-width: 1000px) {
   .checkout-page .delivery-options {
     /* grid-column: 1 means this element will be placed
-       in column 1 in the grid. (Normally, the column that
-       an element is placed in is determined by the order
-       of the elements in the HTML. grid-column overrides
-       this default ordering).
+      in column 1 in the grid. (Normally, the column that
+      an element is placed in is determined by the order
+      of the elements in the HTML. grid-column overrides
+      this default ordering).
 
-       / span 2 means this element will take up 2 columns
-       in the grid (Normally, each element takes up 1
-       column in the grid). */
+      / span 2 means this element will take up 2 columns
+      in the grid (Normally, each element takes up 1
+      column in the grid). */
     grid-column: 1 / span 2;
   }
 }
@@ -152,7 +151,6 @@
 }
 
 .checkout-page .delivery-option-date {
-
   font-weight: 500;
   margin-bottom: 3px;
 }
@@ -171,8 +169,8 @@
 .checkout-page .payment-summary-row {
   display: grid;
   /* 1fr auto; means the width of the 2nd column will be
-     determined by the elements inside the column (auto).
-     The 1st column will take up the remaining space. */
+    determined by the elements inside the column (auto).
+    The 1st column will take up the remaining space. */
   grid-template-columns: 1fr auto;
 
   font-size: 15px;
@@ -205,7 +203,10 @@
   padding-top: 12px;
   padding-bottom: 12px;
   border-radius: 5px;
-
   margin-top: 20px;
   margin-bottom: 19px;
+}
+
+.quantity-textbox {
+  width: 50px;
 }

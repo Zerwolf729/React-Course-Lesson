@@ -1,20 +1,20 @@
 import OrderHeader from "./OrderHeader";
 import OrderDetailsGrid from "./OrderDetailsGrid";
 
-const OrdersGrid = ({ orders }) => {
+const OrdersGrid = ({ orders, loadCart }) => {
   return (
     <div className="orders-grid">
-          {orders.map((order) => {
-            return (
-              <div key={order.id} className="order-container">
-                <OrderHeader order={order} />
+      {orders.map((order) => {
+        return (
+          <div key={order.id} className="order-container">
+            <OrderHeader order={order} />
 
-                <OrderDetailsGrid order={order} />
-              </div>
-            );
-          })}
-        </div>
-  )
-}
+            <OrderDetailsGrid order={order} loadCart={loadCart} />
+          </div>
+        );
+      })}
+    </div>
+  );
+};
 
-export default OrdersGrid
+export default OrdersGrid;
