@@ -29,27 +29,32 @@ const CartItemDetails = ({ cartItem, loadCart }) => {
 
   const handleQuantityKeyDown = (event) => {
     const keyPressed = event.key;
-    
-    if(keyPressed === "Enter") {
+
+    if (keyPressed === "Enter") {
       updateQuantity();
-    } else if(keyPressed === "Escape") {
+    } else if (keyPressed === "Escape") {
       setQuantity(cartItem.quantity);
       setIsUpdatingQuantity(false);
     }
-
-  }
+  };
 
   return (
     <>
-      <img className="product-image" src={cartItem.product.image} />
+      <img
+        className="product-image"
+        src={cartItem.product.image}
+        data-testid="cart-item-image"
+      />
 
       <div className="cart-item-details">
-        <div className="product-name">{cartItem.product.name}</div>
-        <div className="product-price">
+        <div className="product-name" data-testid="cart-item-name">
+          {cartItem.product.name}
+        </div>
+        <div className="product-price" data-testid="cart-item-price">
           {formatMoney(cartItem.product.priceCents)}
         </div>
         <div className="product-quantity">
-          <span>
+          <span data-testid="cart-item-quantity">
             Quantity:{" "}
             {isUpdatingQuantity ? (
               <input
@@ -71,6 +76,7 @@ const CartItemDetails = ({ cartItem, loadCart }) => {
           </span>
           <span
             className="delete-quantity-link link-primary"
+            data-testid="cart-item-delete-quantity-link"
             onClick={deleteCartItem}
           >
             Delete

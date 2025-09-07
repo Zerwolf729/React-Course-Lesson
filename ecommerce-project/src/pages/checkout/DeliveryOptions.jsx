@@ -25,6 +25,7 @@ const DeliveryOptions = ({ deliveryOptions, cartItem, loadCart }) => {
           <div
             key={deliveryOption.id}
             className="delivery-option"
+            data-testid="delivery-option"
             onClick={updateDeliveryOption}
           >
             <input
@@ -32,6 +33,7 @@ const DeliveryOptions = ({ deliveryOptions, cartItem, loadCart }) => {
               checked={deliveryOption.id === cartItem.deliveryOptionId}
               onChange={() => {}}
               className="delivery-option-input"
+              data-testid="delivery-option-input"
               name={`delivery-option-${cartItem.productId}`}
             />
             <div>

@@ -8,7 +8,11 @@ const OrderSummary = ({ cart, deliveryOptions, loadCart }) => {
       {deliveryOptions.length > 0 &&
         cart.map((cartItem) => {
           return (
-            <div key={cartItem.productId} className="cart-item-container">
+            <div
+              key={cartItem.productId}
+              className="cart-item-container"
+              data-testid="cart-item-container"
+            >
               <DeliveryDate
                 cartItem={cartItem}
                 deliveryOptions={deliveryOptions}
@@ -19,7 +23,8 @@ const OrderSummary = ({ cart, deliveryOptions, loadCart }) => {
 
                 <DeliveryOptions
                   cartItem={cartItem}
-                  deliveryOptions={deliveryOptions} loadCart={loadCart}
+                  deliveryOptions={deliveryOptions}
+                  loadCart={loadCart}
                 />
               </div>
             </div>
